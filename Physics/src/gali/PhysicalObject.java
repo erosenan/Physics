@@ -1,19 +1,35 @@
 package gali;
 
 public class PhysicalObject {
-
-	public PhysicalObject(float i) {
-		// TODO Auto-generated constructor stub
+	
+	private float x = 0;
+	private float y = 0;
+	private float vx = 0;
+	private float vy = 0;
+	public PhysicalObject(float m) {
 	}
 
-	public void setVelocity(float Vx, float Vy) {
-		// TODO Auto-generated method stub
+	public void setVelocity(float vx_, float vy_) {
+		vx = vx_;
+		vy = vy_;
+	}
+
+	public void timePassed(float dt) {
+		x = x + vx * dt;
+		y = y + vy * dt; 
 		
 	}
 
-	public void timePassed(float Dt) {
+	public float getX() {
+		return x;
+	}
+//	public float getY() {
+//		return y;
+//	}
+
+	public float getY() {
 		// TODO Auto-generated method stub
-		
+		return y;
 	}
 	
 }
